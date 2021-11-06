@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from "react";
 import SuggestionsList from "./suggestions-list";
-import Country from "./country";
 import "./search.css";
 
 const SearchWithAutoCompete = ({ entries }) => {
@@ -9,7 +8,6 @@ const SearchWithAutoCompete = ({ entries }) => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [searchString, setSearchString] = useState("");
   const inputRef = useRef(null);
-  const [countryDetails, setCountryDetails] = useState({});
 
   useEffect(() => {
     inputRef && inputRef.current.focus();
