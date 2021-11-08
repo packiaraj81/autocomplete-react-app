@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -18,7 +19,8 @@
     "build": "react-scripts build",
     "cypress:open": "sh cypress/cypress-run.sh case:open",
     "cypress:test": "sh cypress/cypress-run.sh",
-    "test": "react-scripts test",
+    "jest": "react-scripts test --watchAll=false",
+    "test": "npm run jest && npm run cypress:test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -40,7 +42,9 @@
     ]
   },
   "devDependencies": {
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.5",
     "cypress": "^8.7.0",
+    "enzyme": "^3.11.0",
     "pm2": "^5.1.2"
   }
 }

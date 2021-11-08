@@ -1,4 +1,5 @@
 import "./suggestions-list.css";
+import PropTypes from "prop-types";
 
 const SuggestionsList = (props) => {
   const {
@@ -42,6 +43,15 @@ const SuggestionsList = (props) => {
       );
     }
   }
+  return null;
+};
+
+SuggestionsList.propTypes = {
+  activeSuggestionIndex: PropTypes.number,
+  filteredSuggestions: PropTypes.array,
+  handleClick: PropTypes.func,
+  showSuggestions: PropTypes.bool,
+  searchString: PropTypes.string,
 };
 
 export default SuggestionsList;

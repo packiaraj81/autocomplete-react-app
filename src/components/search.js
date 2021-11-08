@@ -1,8 +1,10 @@
 import { useEffect, useState, useRef } from "react";
 import SuggestionsList from "./suggestions-list";
 import "./search.css";
+import { PropTypes } from "prop-types";
 
-const SearchWithAutoCompete = ({ entries }) => {
+const SearchWithAutoCompete = (props) => {
+  const { entries } = props;
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(0);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -59,7 +61,7 @@ const SearchWithAutoCompete = ({ entries }) => {
 
   return (
     <>
-      <div>
+      <div className="search-with-autocomplete">
         <input
           className="search-input"
           type="text"
@@ -83,4 +85,5 @@ const SearchWithAutoCompete = ({ entries }) => {
     </>
   );
 };
+
 export default SearchWithAutoCompete;

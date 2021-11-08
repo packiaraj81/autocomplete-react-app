@@ -5,7 +5,7 @@ context("Autocomplete actions", () => {
     cy.server();
   });
 
-  it("navigates to proper pages with navbar links", () => {
+  it("Shows suggestion when matches, if not macthes shows no suggestion available", () => {
     cy.visit("/");
     cy.get(MainApp.wrapper);
 
