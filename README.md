@@ -8,8 +8,8 @@ This is a simple search bar component with auto complete fuctionality. The sugge
 
 In the project directory, you can run:
 
-npm run build - to build and genrate the js bundle
-npm start - to start the app
-npm test - to run the unit test and cypress together
-npm run cypress:open - to open the cypress test in interactive mode in browser
-npm run cypress:tests - to run the cypress in headless mode
+- npm run build - to build and genrate the js bundle
+- npm start - to start the app
+- npm test - to run the unit test and cypress together
+- npm run cypress:open - to open the cypress test in interactive mode in browser
+- npm run cypress:tests - to run the cypress in headless mode
