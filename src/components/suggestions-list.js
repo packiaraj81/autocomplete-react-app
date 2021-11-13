@@ -10,16 +10,21 @@ const SuggestionsList = (props) => {
     searchString,
   } = props;
 
+  const offsetitems = activeSuggestionIndex > 2 ? activeSuggestionIndex - 2 : 0;
+
   if (showSuggestions && searchString) {
     if (filteredSuggestions.length) {
       return (
         <div className="suggestion-wrapper">
           <ul className="suggestions">
-            {filteredSuggestions.map((suggestion, index) => {
+            {filteredSuggestions.slice(offsetitems).map((suggestion, index) => {
               let className;
 
               // Flag the active suggestion with a class
-              if (index === activeSuggestionIndex) {
+              if (
+                index === activeSuggestionIndex ||
+                (activeSuggestionIndex > 2 && index === 2)
+              ) {
                 className = "suggestion-active";
               }
               return (
